@@ -3,7 +3,7 @@ const Student = require('../../main/practice-1/student');
 const Worker = require('../../main/practice-1/worker');
 
 describe("Person", () => {
-  it("should have field name and age", () => {
+  it("1.should have field name and age", () => {
     let person = new Person("Tom", 21);
     expect(person.name).toBe("Tom");
     expect(person.age).toBe(21);
