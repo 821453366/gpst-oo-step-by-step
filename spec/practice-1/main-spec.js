@@ -9,7 +9,7 @@ describe("Person", () => {
     expect(person.age).toBe(21);
   });
 
-  it("should have a method introduce, introduce person with name and age", () => {
+  it("2.should have a method introduce, introduce person with name and age", () => {
     let person = new Person("Tom", 21);
 
     let introduce = person.introduce();
@@ -19,7 +19,7 @@ describe("Person", () => {
   });
 
   describe("Student", () => {
-    it("should have field name, age and class number", () => {
+    it("3.should have field name, age and class number", () => {
       let student = new Student("Tom", 21, 2);
       expect(student.name).toBe("Tom");
       expect(student.age).toBe(21);
@@ -27,7 +27,7 @@ describe("Person", () => {
 
     });
 
-    it("should overwrite Person introduce, introduce student with class", () => {
+    it("4.should overwrite Person introduce, introduce student with class", () => {
       let student = new Student("Tom", 21, 2);
       let introduce = student.introduce();
 
@@ -39,13 +39,13 @@ describe("Person", () => {
 
   describe("Worker", () => {
 
-    it("should have field name, age and klass", () => {
+    it("5.should have field name, age and klass", () => {
       let worker = new Worker("Tom", 21, 2);
       expect(worker.name).toBe("Tom");
       expect(worker.age).toBe(21);
 
     });
-    it("should overwrite Person introduce, introduce with no field", () => {
+    it("6.should overwrite Person introduce, introduce with no field", () => {
       let worker = new Worker("Tom", 21);
 
       let introduce = worker.introduce();
