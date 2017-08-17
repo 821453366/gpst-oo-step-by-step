@@ -5,6 +5,9 @@ module.exports = class Class {
     }
 
     assignLeader(student) {
+        if (this.teacher) {
+            this.teacher.notifyLeaderAssigned(`${student.name} become Leader of Class ${student.clazz.number}`);
+        }
         this.leader = student;
 
         if (this.student !== undefined && this.student.id === student.id) {
@@ -16,5 +19,8 @@ module.exports = class Class {
 
     appendMember(student) {
         this.student = student;
+        if (this.teacher) {
+            this.teacher.notifyStudentAppended(`${student.name} has joined Class ${student.clazz.number}`);
+        }
     }
 }
